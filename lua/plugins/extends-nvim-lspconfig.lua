@@ -7,7 +7,7 @@ return {
         enabled = false,
       },
       ts_ls = {
-        enabled = false,
+        enabled = true,
       },
       vtsls = {
         enabled = false,
