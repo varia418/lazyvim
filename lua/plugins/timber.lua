@@ -18,6 +18,6 @@ return {
         tsx = [[console.log("%log_marker ~", %insert_cursor)]],
       },
     },
-    log_marker = "🪵", -- Or any other string, e.g: MY_LOG
+    log_marker = "🔎", -- Or any other string, e.g: MY_LOG
   },
 }
