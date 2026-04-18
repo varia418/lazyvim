@@ -16,3 +16,17 @@ vim.keymap.set("n", "<C-w>;", "<C-w>l", { noremap = true, silent = true })
 
 -- Remap ; (find next char for f/t) to '
 vim.keymap.set({ "n", "v", "x", "o" }, "'", ";", { noremap = true, silent = true })
+
+vim.api.nvim_create_autocmd("User", {
+  pattern = "MiniFilesBufferCreate",
+  callback = function(args)
+    local buf = args.data.buf_id
+    -- Restore normal up/down movement inside mini.files
+    vim.keymap.set("n", "k", "j", { buffer = buf, noremap = true, silent = true })
+    vim.keymap.set("n", "l", "k", { buffer = buf, noremap = true, silent = true })
+    -- go_out (was h)
+    vim.keymap.set("n", "j", "<cmd>lua MiniFiles.go_out()<cr>", { buffer = buf, noremap = true, silent = true })
+    -- go_in (was l)
+    vim.keymap.set("n", ";", "<cmd>lua MiniFiles.go_in()<cr>", { buffer = buf, noremap = true, silent = true })
+  end,
+})
