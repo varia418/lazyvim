@@ -35,8 +35,8 @@ return {
       win = {
         input = {
           keys = {
-            ["k"] = { "list_down", mode = { "n", "i" } },
-            ["l"] = { "list_up", mode = { "n", "i" } },
+            ["k"] = { "list_down", mode = { "n" } },
+            ["l"] = { "list_up", mode = { "n" } },
             ["j"] = false,
           },
         },
