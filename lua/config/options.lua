@@ -10,5 +10,5 @@ vim.opt.shellcmdflag = "-c"
 vim.opt.shellquote = ""
 vim.opt.shellxquote = ""
 
-vim.opt.spell = true
-vim.opt.spelllang = { "en_us" }
+-- vim.opt.spell = true
+-- vim.opt.spelllang = { "en_us" }
